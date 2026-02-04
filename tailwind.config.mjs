@@ -6,7 +6,7 @@ export default {
       colors: {
         'matas-rojo': '#9A0809', 
         'matas-gris': '#303841',
-        'matas-gris-2': '#3A4750',
+        'matas-gris-2': '#46535C',
         },
       },
     },

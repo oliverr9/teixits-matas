@@ -1,6 +1,10 @@
 ---
+
+
 import Header from '../components/Header.astro';
 import '../styles/global.css';
+import { Image } from 'astro:assets';
+import logoMatasQualitat from '../assets/logos/teixits-matas-qualitat.png';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -17,15 +21,26 @@ import '../styles/global.css';
 <Header></Header>
 
 <main>
-  <div class="w-full h-[90vh] bg-[url('../assets/hero.jpg')] bg-cover bg-center bg-no-repeat flex items-center p-36">
-    <h1 class="text-8xl font-black">AAA</h1>
+  <div class="w-full h-[90vh] bg-[url('../assets/hero.jpg')] bg-cover bg-center bg-no-repeat flex justify-end flex-col items-start pl-20 pb-20 bg-black/20 ">
+    <Image 
+      src={ logoMatasQualitat }
+      class="object-contain w-auto h-[170px] "
+      alt="logo-matas"
+      loading="eager"
+    />
   </div>
 </main>
 <section class="w-full h-[40vh]">
   <div class="flex flex-row justify-center text-white gap-36 mt-24">
-    <div class="border border-white rounded-3xl p-2 w-44 text-center">Mantes</div>
-    <div class="border border-white rounded-3xl p-2 w-44 text-center">Llançols</div>
-    <div class="border border-white rounded-3xl p-2 w-44 text-center">Coixins</div>
-    <div class="border border-white rounded-3xl p-2 w-44 text-center">Edredons</div>
+    <div class="border border-white rounded-3xl p-2 w-44 text-center hover:bg-white hover:text-black transition-colors cursor-pointer">Mantes</div>
+    <div class="border border-white rounded-3xl p-2 w-44 text-center hover:bg-white hover:text-black transition-colors cursor-pointer">Llançols</div>
+    <div class="border border-white rounded-3xl p-2 w-44 text-center hover:bg-white hover:text-black transition-colors cursor-pointer">Coixins</div>
+    <div class="border border-white rounded-3xl p-2 w-44 text-center hover:bg-white hover:text-black transition-colors cursor-pointer">Edredons</div>
   </div>
 </section>
+
+<style>
+  .classHeaderFirst {
+    color: black;
+  }
+</style>
