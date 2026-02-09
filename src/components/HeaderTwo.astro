@@ -45,10 +45,10 @@ import logoMatasHoritzontal from '../assets/logos/teixits-matas-horitzontal.png'
     <li class="flex align-bottom justify-end w-52">
       <div class="flex flex-row items-center gap-8">
         <div>
-          <ion-icon class="text-black h-[35px] w-[35px] cart hover:scale-[1.2] transition-transform duration-200 cursor-pointer" name="cart-outline"></ion-icon>
+          <ion-icon class="text-black h-[35px] w-[35px] cart hover:scale-[1.1] transition-transform duration-200 cursor-pointer" name="cart-outline"></ion-icon>
         </div>
         <div>
-          <ion-icon class="text-black h-[30px] w-[30px] account hover:scale-[1.2] transition-transform duration-200 cursor-pointer" name="person-outline"></ion-icon>
+          <ion-icon class="text-black h-[30px] w-[30px] account hover:scale-[1.1] transition-transform duration-200 cursor-pointer" name="person-outline"></ion-icon>
         </div>
       </div>
     </li>
@@ -62,12 +62,10 @@ import logoMatasHoritzontal from '../assets/logos/teixits-matas-horitzontal.png'
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
-      // Clases cuando hay scroll: fondo blanco con opacidad y blur
-      header?.classList.add('bg-white/70', 'backdrop-blur-md', 'shadow-sm', 'h-16');
+      header?.classList.add('bg-white/70', 'backdrop-blur-md', 'shadow-sm', 'h-16',);
       header?.classList.remove('bg-transparent', 'h-20');
     } else {
-      // Clases cuando estamos arriba del todo
-      header?.classList.remove('bg-white/70', 'backdrop-blur-md', 'shadow-sm', 'h-16');
+      header?.classList.remove('bg-white/70', 'backdrop-blur-md', 'shadow-sm', 'h-16',);
       header?.classList.add('bg-transparent', 'h-20');
     }
   });
@@ -82,8 +80,21 @@ import logoMatasHoritzontal from '../assets/logos/teixits-matas-horitzontal.png'
     --ionicon-stroke-width: 32px;
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1));
   }
-  /* Ajuste para el icono de menú dentro del group */
   ion-icon[name="menu-outline"] {
     --ionicon-stroke-width: 32px;
   }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input[type="search"]::-ms-clear,
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
 </style>
